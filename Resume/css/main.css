@@ -1,0 +1,487 @@
+/* FONTS
+font-family: 'Hind Guntur', sans-serif;
+font-family: 'Hind Vadodara', sans-serif;
+font-family: 'Gudea', sans-serif;
+font-family: 'Ropa Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Maven Pro', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Hind Madurai', sans-serif;
+font-family: 'Asap', sans-serif; 98cfd9
+*/
+
+body {
+  font-family: "Source Code Pro", monospace;
+  color: #fff;
+  margin: 0;
+  background: -webkit-linear-gradient(
+    to bottom,
+    #b4faf2,
+    #085078
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #2294a8,
+    #085078
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#text-small,
+#text-big {
+  font-family: Niconne;
+  color: #eeeeee;
+  text-shadow: 2px 2px #222222;
+}
+
+#text-small {
+  font-size: 3vw;
+}
+
+#text-big {
+  font-size: 5vw;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 64px;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 22px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+p {
+  margin-bottom: 30px;
+  line-height: 30px;
+}
+img {
+  border: 0;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: #ddd;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #09183d;
+}
+
+main {
+  width: 70%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+footer {
+  color: #fff;
+  position: relative;
+  height: 65px;
+  left: 0;
+  bottom: 0;
+  font-size: 14px;
+  background-color: #090f33;
+  width: 100%;
+  height: max-content;
+  padding: 15px;
+}
+
+.button {
+  background-color: #090f33;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+nav {
+  text-align: center;
+  margin: 40px;
+  float: right;
+}
+nav > a.button {
+  background-color: #278c9e;
+}
+
+ul {
+  font-size: 12.5px;
+  line-height: 20px;
+}
+
+.hero {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background-color: #090f33;
+  background-image: url(https://i.pinimg.com/originals/6c/0b/54/6c0b541ca892b09a03813ed2ac674444.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 320px;
+}
+/* .social {
+  float: right;
+} */
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* timeline code */
+* {
+  box-sizing: border-box;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.tlcontainer {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.tlcontainer::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #090f33;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.tlleft {
+  left: 0;
+}
+
+/* Place the container to the right */
+.tlright {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.tlleft::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.tlright::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.tlright::after {
+  left: -16px;
+}
+
+/* The actual content */
+.tlcontent {
+  padding: 20px 30px;
+  background-color: #090f33;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .tlcontainer {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .tlcontainer::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .tlleft::after,
+  .tlright::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .tlright {
+    left: 0%;
+  }
+}
+
+.hometown {
+  display: flex;
+  justify-content: center;
+}
+.visit {
+  display: flex;
+  justify-content: center;
+}
+
+.box > img {
+  border-radius: 50%;
+  box-shadow: rgba(5, 5, 54, 0.959) 0px 40px 40px -20px;
+  margin: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.head-resume {
+  border-radius: 5px;
+  background-color: #4c98af;
+  height: 150px;
+  margin-bottom: 30px;
+}
+#image {
+  float: left;
+  margin-top: 1%;
+  margin-left: 20px;
+}
+#name {
+  float: left;
+  margin-top: 65px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  font-size: 26px;
+  font-weight: 200;
+  color: #ffffff;
+}
+#email {
+  float: right;
+  margin-top: 65px;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Table */
+
+.table-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+
+table {
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+
+table tbody tr {
+  border: solid 1px #ffffff;
+  border-left: 0;
+  border-right: 0;
+}
+
+table tbody tr:nth-child(2n + 1) {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+table td {
+  padding: 0.75em 0.75em;
+}
+
+table th {
+  color: #ffffff;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 0 0.75em 0.75em 0.75em;
+  text-align: left;
+}
+
+table thead {
+  border-bottom: solid 2px #ffffff;
+}
+
+table tfoot {
+  border-top: solid 2px #ffffff;
+}
+
+table.alt {
+  border-collapse: separate;
+}
+
+table.alt tbody tr td {
+  border: solid 1px #ffffff;
+  border-left-width: 0;
+  border-top-width: 0;
+}
+
+table.alt tbody tr td:first-child {
+  border-left-width: 1px;
+}
+
+table.alt tbody tr:first-child td {
+  border-top-width: 1px;
+}
+
+table.alt thead {
+  border-bottom: 0;
+}
+
+table.alt tfoot {
+  border-top: 0;
+}
+
+.skill-row {
+  padding: px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill {
+  color: #11455c;
+  font-weight: 600;
+  margin: 15px;
+  height: 28px;
+  width: 150px;
+  padding-top: 5px;
+  text-align: center;
+  border-radius: 25px;
+  font-family: "Open Sans";
+  background-color: #eef1f3;
+}
+
+.form-group {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 60px;
+  margin: 12px auto;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+form > div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0 20px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(35, 92, 109);
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-align: center;
+}
+
+form > div > img {
+  filter: invert(1);
+  width: 50px;
+}
+
+form > input,
+form > textarea {
+  padding: 12px;
+  margin: 12px auto;
+  border: 1px solid #ccc;
+  color: #ddd;
+  background-color: rgba(34, 34, 34, 0.308);
+  border-radius: 4px;
+  display: block;
+  width: 70vw;
+}
+
+form > textarea {
+  height: 100px;
+  resize: none;
+}
+
+form > input[type="submit"] {
+  max-width: 20vw;
+  padding-left: 1%;
+  padding-right: 1%;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+form > input[type="submit"]:hover {
+  background-color: rgba(10, 65, 82, 0.719);
+}
